@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1급 객체
+
+        //변수에 할당할 수 있음
+        const greet = function(){
+            console.log('Hello World!');
+        };
+        greet();
+
+        //객체의 프로퍼티로 사용할 수 있음
+        const obj = {
+            greet: function(){
+                console.log('Hello World!');
+            }
+        };
+        obj.greet();
+
+        //함수의 인자로 전달할 수 있음
+        function greeting(name, callback){
+            console.log(`Hello, ${name}!`);
+            callback();
+        }
+        function sayGoodbye(){
+            console.log('Goodbye!');
+        }
+        greeting('John', sayGoodbye);
+
+        //함수의 반환값으로 사용할 수 있음
+        function greeting(name){
+            return function(){
+                console.log(`Hello, ${name}!`);
+            }
+        }
+        const sayHello = greeting('John');
+        sayHello();
+    </script>
+</body>
+</html>

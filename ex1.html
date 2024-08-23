@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //*var과 let의 차이
+        function varScopeEx(){
+            if(true){
+                var x = 1;
+            }
+            console.log(x);
+        }
+        function letScopeEx(){
+            if(true){
+                let y = 2;
+            }
+            console.log(y);
+        }
+        varScopeEx();//블록 밖에서 접근 가능
+        letScopeEx();//블록 밖에서 접근 불가
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //forEach()
+        const num1 = [1, 2, 3, 4, 5];
+        num1.forEach(function(num1){
+            console.log(num1);
+        });
+
+        //map()
+        const num2 = [1, 2, 3, 4, 5];
+        const doubled = num2.map(function(number){
+            return number * 2;
+        });
+        console.log(doubled);
+        
+        //filter()
+        const num3 = [1, 2, 3, 4, 5];
+        const evenNum1 = num3.filter(function(number){
+            return number % 2 == 0;
+        });
+        console.log(evenNum1);
+
+        //reduce()
+        const num4 = [1, 2, 3, 4, 5];
+        const sum = num4.reduce(function(accmulator, currentValue){
+            return accmulator + currentValue;
+        }, 0);
+
+        //some()
+        const num5 = [1, 2, 3, 4, 5];
+        const EvenNum2 = num5.some(function(number){
+            return number % 2 === 0;
+        });
+        console.log(EvenNum2);
+
+        //every()
+        const num6 = [1, 2, 3, 4, 5];
+        const EvenNum3 = num6.every(function(number){
+                return number % 2 === 0;
+        });
+        console.log(EvenNum3) === 0;
+
+        //indexOf()
+        const fruits = ['apple', 'banana', 'orange'];
+        const index1 = fruits.indexOf('banana');
+        console.log(index1);
+
+        //lastIndexOf()
+        const fruit = ['apple', 'banana', 'orange', 'banana'];
+        const index2 = fruit.lastIndexOf('banana');
+        console.log(index2);
+        
+        //isArray()
+        console.log(Array.isArray([1, 2, 3]));
+        console.log(Array.isArray('hello'));
+    </script>
+</body>
+</html>
